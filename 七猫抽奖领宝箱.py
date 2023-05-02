@@ -62,8 +62,8 @@ def lucky_draw_seven():
     for i in range(0, 5):
         response = requests.post(url=url, data=payload, headers=headers, params=querystring)
         jsondata = json.loads(response.text)
-        result = jsondata["data"]["title"]
-        print(result)
+#         result = jsondata["data"]["title"]
+        print(response.text)
     time.sleep(random.randint(1, 5))
 
 
